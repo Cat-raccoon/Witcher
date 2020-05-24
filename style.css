@@ -3,9 +3,13 @@ body, ul, li, h1, h2, a{
     padding: 0;
     font-family: arial;
 }
-
-header{
-    background-color: #1F3655;
+body.classic{
+    background-color: white;
+}
+body.dark{
+    background-color: #111111;
+}
+header{    
     padding: 10px;
     text-align: center;
     position: fixed;
@@ -13,6 +17,12 @@ header{
     z-index: 1;
     top: 0px;
     left: 0px;
+}
+header.classic{
+    background-color: #1F3655;
+}
+header.dark{
+    background-color: black;
 }
 header h1{
     color: #BBCBCA;
@@ -67,7 +77,7 @@ nav ul{
     margin: 0 auto;
 }
 nav li{
-    width: 25%;
+    width: 22%;
     display: inline-block;
     font-size: 25px;
 }
@@ -83,6 +93,7 @@ nav li a.thisPage{
 nav li a:hover{
     border: 5px solid #B32732;
     border-radius: 8px;
+    cursor: pointer;
     /* color: #B32732; */
     /* text-decoration: underline #B32732; */
 }
@@ -91,12 +102,22 @@ main{
     max-width: 100%;
     width: 1200px;
     margin: 80px auto;
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 0 40px;
     box-sizing: border-box;
 }
+
 article h2{
-    color: #233C50;
     font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+article h2.classic{
+    color: #233C50;
+}
+article h2.dark{
+    color: #BBCBCA;
 }
 article p{
     line-height: 1.8em;
@@ -106,6 +127,10 @@ article p{
 .images{
     text-align: center;
     margin: 80px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
     white-space: nowrap;
 }
 .images li{
@@ -125,11 +150,16 @@ article p{
     /* position: fixed;
     width: 100%;
     bottom: 0; */
-     background: #47667B;
      text-align: center;
      padding: 60px 20px;
      color: #BBCBCA;
      margin-bottom: 70px;
+ }
+ .join.classic{
+    background: #47667B;
+ }
+ .join.dark{
+    background: #5A5E61;
  }
  .join a{
      text-decoration: none;
@@ -149,10 +179,15 @@ footer{
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #1F3655;
     color: white;
     padding: 10px;
     text-align: center;
+}
+footer.classic{
+    background: #1F3655;
+}
+footer.dark{
+    background: black;
 }
 
 section.registration{
@@ -175,9 +210,15 @@ margin-top: 50px;
 margin-left: auto;
 margin-right: auto;
 margin-bottom: 100px;
-background: #BBCBCA;
-border: 5px solid #B32732;
 padding: 20px;
+}
+.registration.classic{
+    border: 5px solid #B32732;
+    background: #BBCBCA;
+}
+.registration.dark{
+    border: 5px solid black;
+    background: #BBCBCA;
 }
 
 h2.registration{
@@ -189,22 +230,32 @@ h2.registration{
 }
 form input{
     text-align: center;
-    background: #5A5E61;
-    border: white solid 3px;
     border-radius:2px;
-    color: #BBCBCA;
     font-size: 20px;
     outline: none;
 }
-
+form.classic input{
+    border: white solid 3px;
+    background: #5A5E61;
+    color: #BBCBCA;
+}
+form.dark input{
+    border: black solid 3px;
+    background: #111111;
+    color: #BBCBCA;
+}
 form input:focus{
     border: #B32732 solid 3px;
 }
-form input:valid{
+form.classic input:valid{
     border: solid #3D7F8E 3px;
     background: #1F3655;
 }
-
+form.dark input:valid{
+    border: solid black 3px;
+    background: #BBCBCA;
+    color: #111111;
+}
 article.nwes{
     margin-bottom: 100px;
 }
